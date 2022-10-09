@@ -15,145 +15,15 @@
     <body>
         <div class="page-wrapper">
 
-            <div class="mobile-menu-container" id="mobile_menu_container">
-                <button class="mobile-menu-close-btn" id="mobile_menu_close_btn">
-                    <i class="fas fa-times"></i>
-                </button>
-                <nav class="mobile-nav">
-                    <ul class="mobile-menu">
-                        <li class="menu-item">
-                            <a href="#">
-                                <div>Jeans</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <div>Hats</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <div>Jackets</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <div>Dresses</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">
-                                <div>Sneakers</div>
-                            </a>
-                        </li>
-                        <li class="menu-item font-weight-bold">
-                            <a href="#">
-                                <div>Login</div>
-                            </a>
-                        </li>
-                        <li class="menu-item font-weight-bold">
-                            <a href="#">
-                                <div>Cart</div>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
 
-
-            <header class="header">
-                <div class="container-fluid">
-                    <button class="mobile-menu-toggler" id="mobile_menu_toggler">
-                        <i class="fas fa-bars"></i>
-                    </button>
-
-                    <a href="#" class="logotype">
-                        <img src="{{ asset('build/images/icons/logo_366x79.svg') }}" alt="RankedChoice Logotype">
-                    </a>
-                    <nav class="main-nav">
-                        <ul class="menu">
-                            <li class="menu-item">
-                                <a href="#">
-                                    <div>Jeans</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <div>Hats</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <div>Jackets</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <div>Dresses</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    <div>Sneakers</div>
-                                </a>
-                            </li>
-
-                            <li class="menu-item font-weight-bold">
-                                <a href="#">
-                                    <div>Login</div>
-                                </a>
-                            </li>
-                            <li class="menu-item font-weight-bold">
-                                <a href="#">
-                                    <div>Cart</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            {% include 'main/_embed/header.html.twig' %}
 
             <main class="main">
                 {% block body %}
                 {% endblock %}
             </main>
 
-            <footer class="footer">
-                <div class="footer-middle">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-12 mt-3">
-                                <h4 class="widget-title">Useful links</h4>
-                                <ul class="widget-list">
-                                    <li>
-                                        <a href="#">Homepage</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sign up</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-12 mt-3">
-                                <h4 class="widget-title">My Account</h4>
-                                <ul class="widget-list">
-                                    <li>
-                                        <a href="#">Sign in</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">View cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">My profile</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-12 mt-3">
-                                <p class="widget-copyright">Copyright © RankedChoice Team. All Rights Reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            {% include 'main/_embed/footer.html.twig' %}
         </div>
 
         {% block javascripts %}{% endblock %}
